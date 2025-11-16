@@ -152,6 +152,119 @@ async def start(client: Client, msg: Message):
         "Progress:[🟩🟩🟩🟩🟩🟩🟩🟩🟩] 100%\n\n"
     )
 
+# ------------------ VIP COMMAND ------------------
+@bot.on_message(filters.command(["vip"]))
+async def vip_handler(bot, message):
+
+    button = InlineKeyboardMarkup([[
+        InlineKeyboardButton(
+            "Let's Create Bot Command🚀",
+            url="https://lnk.ink/Txt.Downloader.Command"
+        )
+    ]])
+
+    text = (
+        " *Hello Cutie Pie🌚😘* \n"
+        "You Want to Use this Bot and Download Txt to Video Download Fastly?\n\n"
+        "Yaar Dekho Truly Batau to ye Possible to nahi hai ki Bot Owner ki Command Change Karke "
+        "New Command banaake Mera Use kar pao.\n\n"
+        "*But You Can Create a New Command Header [Temporary] and use to me As Your Own Bot.*\n\n"
+        "So Uske liye Niche wala Url par Visit karna then Create karna New Command "
+        "*(No Need to Bot Token Or authentication)*\n\n"
+        "So Tap On Below Button then Create a Costume Command. *(Using Only My Username)*\n\n"
+        "For More Details Just Send to me /Help Command and explore More."
+    )
+
+    await message.reply_text(
+        text,
+        reply_markup=button,
+        parse_mode="markdown"
+    )
+
+
+# ------------------ ACTION MESSAGE (BUTTON PRESS) ------------------
+@bot.on_message(filters.command(["actionmsg"]))
+async def vip_action_handler(bot, message):
+    await message.reply_text(
+        "Go Ahead Baby😘\n"
+        "Let's Create a New Costume Command.\n\n"
+        "Powered By: @SmartBoy_ApnaMS\n\n"
+        "*With Regards💥*\n"
+        "Your Cute MS🙃",
+        parse_mode="markdown"
+    )
+
+
+# ------------------ HELP COMMAND ------------------
+@bot.on_message(filters.command(["help"]))
+async def help_handler(bot, message):
+
+    button = InlineKeyboardMarkup([[
+        InlineKeyboardButton(
+            "Let's Create Bot Command🚀",
+            url="https://lnk.ink/Txt.Downloader.Command"
+        )
+    ]])
+
+    text = (
+        "*Hello Baby🌚😘*\n"
+        "How i can Help You.🤔\n\n"
+        "Achha Txt se Video Download karne ke liye aik Costume Command Create Karna Chahte ho?\n\n"
+        "---------------------------------------------\n"
+        "Point wise niche dekh lo 👇\n"
+        "---------------------------------------------\n\n"
+
+        "1️⃣ Copy My Username. *[Bot Username]*\n"
+        "2️⃣ Send Command “vip”.\n"
+        "3️⃣ Tap Below Button.\n"
+        "4️⃣ Redirect to Website.\n"
+        "5️⃣ Create Costume Command Header.\n"
+        "6️⃣ Follow Step-by-step instructions.\n\n"
+        "⚠ Username without '@'\n\n"
+        "For Example:\n"
+        "If '@Vipuploader_bot', then use 'Vipuploader_bot'\n\n"
+        "If Any Problem → Send /owner\n"
+        "Thanks For Using Me❤😘"
+    )
+
+    await message.reply_text(
+        text,
+        reply_markup=button,
+        parse_mode="markdown"
+    )
+
+
+
+# ------------------ OWNER COMMAND ------------------
+@bot.on_message(filters.command(["owner"]))
+async def owner_handler(bot, message):
+
+    text = (
+        "⧣₊˚﹒✦₊  ⧣₊˚  𓂃★\n"
+        "      /)    /)\n"
+        "    (｡•ㅅ•｡)〝₎₎ *Owner Intro!* ✦₊ ˊ˗   \n"
+        ". .╭∪─∪────────── ✦ ⁺.\n"
+        ". .┊ ◟﹫ *Name* : SmartyMS\n"
+        ". .┊﹒𐐪 *Age* : 18 Coming...\n"
+        ". .┊ꜝꜝ﹒*Pronouns* : MS\n"
+        ". .┊ ⨳゛*Sexuality* : Male\n"
+        ". .┊ ◟ヾ *Likes* : BMW Cars\n"
+        ". .┊﹒𐐪 *Dislikes* : People Attitude\n"
+        ". .┊ ◟£ *Tg Name*: ᴠ‌ɪ‌ᴘ‌𝗖𝘂𝗧𝗲♡𝗡𝗮𝘄𝗮𝗮𝗯𝗭𝗮𝗱𝗮𓆩♛𓆪\n"
+        ". .┊ ◟﹫ *username* : @SmartBoy_ApnaMS\n"
+        ". .┊﹒𐐪 *Status* : Unmarried\n"
+        ". .┊ꜝꜝ﹒*Crush* : 1\n"
+        ". .┊ ⨳゛*Ex* : Unlimited\n"
+        ". .┊ ◟ヾ *Hobby* : Helping & Service to People.\n"
+        ". .┊﹒𐐪 *Condition* : Neet Dropper\n"
+        "   ╰─────────────  ✦ ⁺.\n"
+        "⧣₊˚﹒✦₊  ⧣₊˚  𓂃★"
+    )
+
+    await message.reply_text(
+        text,
+        parse_mode="markdown"
+    )
 @bot.on_message(filters.command(["stop"]) )
 async def restart_handler(_, m):
     await m.reply_text("**STOPPED**🛑", True)
