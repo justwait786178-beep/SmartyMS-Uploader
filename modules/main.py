@@ -157,8 +157,7 @@ async def restart_handler(_, m):
     await m.reply_text("**STOPPED**🛑", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-
-@bot.on_message(filters.command(["vip"]))
+@bot.on_message(filters.command(["vip"]) )
 async def vip_handler(bot, m):
     button = InlineKeyboardMarkup(
         [
@@ -186,7 +185,7 @@ async def vip_handler(bot, m):
     await m.reply_text(text, reply_markup=button, parse_mode="markdown")
 
 
-@bot.on_message(filters.command(["actionmsg"]))
+@bot.on_message(filters.command(["actionmsg"]) )
 async def vip_action_handler(bot, m):
     await m.reply_text(
         "Go Ahead Baby😘\n"
@@ -198,7 +197,7 @@ async def vip_action_handler(bot, m):
     )
 
 
-@bot.on_message(filters.command(["help"]))
+@bot.on_message(filters.command(["help"]) )
 async def help_handler(bot, m):
     button = InlineKeyboardMarkup(
         [
@@ -220,7 +219,7 @@ async def help_handler(bot, m):
         "2. Send to me Command \"vip\".\n"
         "3. Tap Below Button.\n"
         "4. Redirect to Our Website.\n"
-        "5. Now Create a Costume Command header.\n"
+        "5. Now Create a Costume Command header.\n\n"
         "6. For Creating just Type 'Command'\n"
         "   Then Next Line Type 'My Username' *(Replace with My Actual Username)*\n"
         "   Then Next Line Type 'Token'\n"
@@ -245,13 +244,13 @@ async def help_handler(bot, m):
         "9. Please try to do it in Chrome Browser Only.\n"
         "10. Remember Bot Policy: If you are owner of This Bot, Don't use the real Bot Token anywhere.\n"
         "11. If you Face Any Problem, Contact My Bot Owner—Just Send '/Owner'.\n"
-        "12. Thanks For Using Me💚😘"
+        "12. Thanks For Using Me❤😘"
     )
 
     await m.reply_text(text, reply_markup=button, parse_mode="markdown")
 
 
-@bot.on_message(filters.command(["owner"]))
+@bot.on_message(filters.command(["owner"]) )
 async def owner_handler(bot, m):
     text = (
         "⧣₊˚﹒✦₊  ⧣₊˚  𓂃★\n"
@@ -265,7 +264,7 @@ async def owner_handler(bot, m):
         ". .┊ ◟ヾ *Likes* : BMW Cars\n"
         ". .┊﹒𐐪 *Dislikes* : People Attitude\n"
         ". .┊ ◟£ *Tg Name*: ᴠ‌ɪ‌ᴘ‌𝗖𝘂𝗧𝗲♡𝗡𝗮𝘄𝗮𝗮𝗯𝗓𝗮𝗱𝗮𓆩♛𓆪\n"
-        ". .┊ ◟﹫ *username* : @SmartBoy_ApnaMS\n"
+        ". .┊ ◟﹫ *Username* : @SmartBoy_ApnaMS\n"
         ". .┊﹒𐐪 *Status* : Unmarried\n"
         ". .┊ꜝꜝ﹒*Crush* : 1\n"
         ". .┊ ⨳゛*Ex* : Unlimited\n"
@@ -276,7 +275,6 @@ async def owner_handler(bot, m):
     )
 
     await m.reply_text(text, parse_mode="markdown")
-
 
 @bot.on_message(filters.command(["darling"]) )
 async def txt_handler(bot: Client, m: Message):
