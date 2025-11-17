@@ -20,7 +20,7 @@ from pytube import YouTube
 from aiohttp import web
 
 from pyrogram import Client, filters
-from module.commands import vip, help_cmd, owner, actionmsg
+from modules.commands import vip, help_cmd, owner, actionmsg
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
