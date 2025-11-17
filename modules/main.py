@@ -20,6 +20,7 @@ from pytube import YouTube
 from aiohttp import web
 
 from pyrogram import Client, filters
+from module.commands import vip, help_cmd, owner, actionmsg
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
@@ -151,6 +152,23 @@ async def start(client: Client, msg: Message):
         "Checking status Okay... Command is Private.🌚**Bot Made BY @SmartBoy_ApnaMS**🔍\n\n"
         "Progress:[🟩🟩🟩🟩🟩🟩🟩🟩🟩] 100%\n\n"
     )
+
+@bot.on_message(filters.command("vip"))
+async def _vip(client, message):
+    await vip(client, message)
+
+@bot.on_message(filters.command("help"))
+async def _help(client, message):
+    await help_cmd(client, message)
+
+@bot.on_message(filters.command("owner"))
+async def _owner(client, message):
+    await owner(client, message)
+
+@bot.on_message(filters.command("actionmsg"))
+async def _action(client, message):
+    await actionmsg(client, message)
+
 
 @bot.on_message(filters.command(["stop"]) )
 async def restart_handler(_, m):
