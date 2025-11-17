@@ -5,7 +5,7 @@ from telegram.ext import (
     ContextTypes,
 )
 
-TOKEN = "8121301262:AAGttLz3Vbu5zJyYiHb35YHIvHXp_MKgQr4"
+TOKEN = "8121301262:AAGmtrHOpyfxwG7G3zTCXPxiJudTYXw9xK8"
 
 
 # ---------------------- VIP COMMAND -------------------------
