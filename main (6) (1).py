@@ -624,10 +624,20 @@ async def txt_handler(bot: Client, m: Message):
                 continue
 
     except Exception as e:
-        await m.reply_text(e)
-    await m.reply_text("𝐀𝐋𝐋 𝐃𝐎𝐍𝐄😚✅🔸🔹 Download By💳 : @SmartBoy_ApnaMS🌹")
+    await m.reply_text(e)
 
+# --- EVERYTHING IS DONE MESSAGE ---
+from datetime import datetime
 
+# extracting_time in Day | Month | Year format
+extracting_time = datetime.now().strftime("%d | %m | %Y")
+
+await m.reply_text(
+    f"𝙀𝙑𝙀𝙍𝙔𝙏𝙃𝙄𝙉𝙂 𝙄𝙎 𝘿𝙊𝙉𝙀  𝘿𝙊𝙉𝙀\n\n"
+    f"𝘿𝘼𝙏𝙀:- {extracting_time}\n\n"
+    f"📥 **Extracted By♠:** {CR}\n\n"
+    f"Powered By: **TEAM JB**"
+)
 
 bot.run()
 if __name__ == "__main__":
