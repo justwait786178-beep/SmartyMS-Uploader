@@ -618,27 +618,23 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                await m.reply_text(
-                    f"⌘ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝗙𝗮𝗶𝗹𝗲𝗱⛔\n\n⌘ 𝐍𝐚𝐦𝐞🌟 » {name}\n⌘ 𝐋𝐢𝐧𝐤 » `{url}`"
-                )
-                continue
+            await m.reply_text(
+                f"📛 Downloading Failed❌\n\n🔆 Name☀️ » {name}\n🔗 Link » `{url}`"
+            )
+            continue
 
     except Exception as e:
-    await m.reply_text(e)
+        await m.reply_text(e)
 
-# --- EVERYTHING IS DONE MESSAGE ---
-from datetime import datetime
+    # --- EVERYTHING IS DONE MESSAGE ---
+    from datetime import datetime
 
-# extracting_time in Day | Month | Year format
-extracting_time = datetime.now().strftime("%d | %m | %Y")
+    # extracting_time in Day | Month | Year format
+    extracting_time = datetime.now().strftime("%d | %m | %Y")
 
-await m.reply_text(
-    f"𝙀𝙑𝙀𝙍𝙔𝙏𝙃𝙄𝙉𝙂 𝙄𝙎 𝘿𝙊𝙉𝙀  𝘿𝙊𝙉𝙀\n\n"
-    f"𝘿𝘼𝙏𝙀:- {extracting_time}\n\n"
-    f"📥 **Extracted By♠:** {CR}\n\n"
-    f"Powered By: **TEAM JB**"
-)
-
-bot.run()
-if __name__ == "__main__":
-    asyncio.run(main())
+    await m.reply_text(
+        f"𝙀𝙑𝙀𝙍𝙔𝙏𝙃𝙄𝙉𝙂 𝙄𝙎 𝘿𝙊𝙉𝙀  𝘿𝙊𝙉𝙀\n\n"
+        f"𝘿𝘼𝙏𝙀:- {extracting_time}\n\n"
+        f"📥 **Extracted By♠:** {CR}\n\n"
+        f"Powered By: **TEAM JB**"
+    )
