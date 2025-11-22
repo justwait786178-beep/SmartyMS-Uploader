@@ -608,7 +608,7 @@ async def txt_handler(bot: Client, m: Message):
                         continue                       
                           
                 else:
-                    Show = f"✰🖥️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝗪𝗮𝗶𝘁..🤖🚀»\n\n📝 Title:- `{name}\n\n🖥️ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲🧸: ✦ @SmartBoy_ApnaMS✰"
+                    Show = f"✰🖥️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝗪𝗮𝗶𝘁..🤖🚀»\n\n📝 Title:- `{name}\n\n🖥️ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲🧸: ✦ @Inventor_king_09✰"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -624,20 +624,10 @@ async def txt_handler(bot: Client, m: Message):
                 continue
 
     except Exception as e:
-    await m.reply_text(e)
+        await m.reply_text(e)
+    await m.reply_text("𝐀𝐋𝐋 𝐃𝐎𝐍𝐄😚✅🔸🔹 Download By💳 : @Inventor_king_09🌹")
 
-# --- EVERYTHING IS DONE MESSAGE ---
-from datetime import datetime
 
-# extracting_time in Day | Month | Year format
-extracting_time = datetime.now().strftime("%d | %m | %Y")
-
-await m.reply_text(
-    f"𝙀𝙑𝙀𝙍𝙔𝙏𝙃𝙄𝙉𝙂 𝙄𝙎 𝘿𝙊𝙉𝙀  𝘿𝙊𝙉𝙀\n\n"
-    f"𝘿𝘼𝙏𝙀:- {extracting_time}\n\n"
-    f"📥 **Extracted By♠:** {CR}\n\n"
-    f"Powered By: **TEAM JB**"
-)
 
 bot.run()
 if __name__ == "__main__":
